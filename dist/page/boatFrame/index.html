@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+
+    <title>实时视频</title>
+    <link rel="stylesheet" type="text/css" href="../../css/plenary/index.css">
+    <link href="../../lib/video-js.min.css" rel="stylesheet">
+    <link href="../../lib/polyfill.object-fit.min.css" rel="stylesheet">
+
+    <script src="../../lib/videojs-ie8.min.js"></script>
+    <script src="../../lib/video.min.js"></script>
+
+</head>
+
+<!-- <body onload="init()" onunload="ButtonLogout_onclick()" style="overflow-x:hidden;overflow-y:hidden; background: none;"> -->
+<body style="overflow-x:hidden;overflow-y:hidden; background: none;">
+
+
+    <div class="box-video">
+        <div class="item-box" style="margin-right: 16px;">
+            <div class="sub-sub-title">
+                <span></span>
+                <i>船舶实时信息</i>
+            </div>
+            <div class="car-door-video">
+                <dl id="J_boat_temp">
+
+                </dl>
+            </div>
+        </div>
+        <div class="item-box">
+            <div class="sub-sub-title">
+                <span></span>
+                <i>码头前沿泊位视频监控●船舶轨迹</i>
+            </div>
+            <div class="car-main-con">
+                <div class="scroll-item scroll-l J_scroll_l"></div>
+                <div class="scroll-item scroll-r J_scroll_r"></div>
+                <div class="video-menu-box">
+                    <ul class="J_video_select" videoType="boat" scrollTag=0>
+                        <li tagInd=0 class="cur" szCameraId="1000071$1$0$23">前沿1</li>
+                        <li tagInd=1 szCameraId="1000071$1$0$24">前沿2</li>
+                        <li tagInd=2 szCameraId="1000071$1$0$27">前沿3</li>
+                        <li tagInd=3 szCameraId="1000071$1$0$36">前沿4</li>
+                        <li tagInd=4 szCameraId="1000071$1$0$31">前沿5</li>
+                        <li tagInd=5 szCameraId="1000071$1$0$52">前沿6</li>
+                        <li tagInd=6 szCameraId="1000071$1$0$32">前沿7</li>
+                        <li tagInd=7 szCameraId="1000071$1$0$54">前沿8</li>
+                    </ul>
+                </div>
+                <div class="door-video-box J_video_door">
+
+                    <!-- <video id="J_video" src="http://121.31.41.93:18080/staticVideo/ship0.mp4" type="video/mp4" width="250" height="130" autoplay="autoplay" loop="loop" style="width:100%; height:100%; object-fit: fill">
+                        <p style="padding: 50px;color:#fff;text-align: center">您的浏览器不支持 HTML5 video 标签。</p>
+                    </video> -->
+
+                    <video id="J_video" src="http://121.31.41.93:18080/staticVideo/ship0.mp4" type="video/mp4" width="250" height="130" autoplay="autoplay" loop="loop" style="width:100%; height:100%; object-fit: cover">
+                        <!-- <source src="http://www.caih.com/upload/video/135.mp4" type="video/mp4"> -->
+                            <!-- <source class="mp" src="http://121.31.41.93:18080/staticVideo/testVideo/test.mp4" type="video/mp4">
+                            <source class="web" src="http://121.31.41.93:18080/staticVideo/testVideo/test.webm" type="video/webm">
+                            <source class="og" src="http://121.31.41.93:18080/staticVideo/testVideo/test.ogv" type="video/ogg"> -->
+                    </video>
+
+                    <!--<div id="obj">
+                        <object id="DPSDK_OCX" classid="CLSID:D3E383B6-765D-448D-9476-DFD8B499926D" codebase="DpsdkOcx.cab#version=1.0.0.0"></object>
+                    </div>
+                    <div class="ctrlBox">
+                        登录登出
+                        <span><input type="button" id="buttonLogin2" value="登录" class="button" onclick="return ButtonLogin_onclick()" /></span>
+                        <span><input type="button" id="buttonLogout" value="登出" class="button" onclick="return ButtonLogout_onclick()" /></span>
+                        按窗口号
+                        <input type="button" id="buttonStartRealplayByWndNo2" value="播放视频" onclick="return ButtonStartRealplayByWndNo_onclick2()" />
+                        <input type="button" id="buttonStopRealplayByWndNo" value="关闭视频" onclick="return ButtonStopRealplayByWndNo_onclick()" />
+                        信息：
+                        <span id="RetInfo"></span>
+                    </div> -->
+                </div>
+            </div>
+            <div class="ship-line" id="J_shipLine">
+                
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <script src="../../lib/polyfill.object-fit.min.js"></script>
+    <script>
+      // Call polyfill to fit in video
+      document.addEventListener('DOMContentLoaded', function () {
+       objectFit.polyfill({
+        selector: 'video',
+        fittype: 'cover'
+       });
+      });
+     </script>
+
+
+
+
+<!-- <script src="../../lib/ocxfun-double.js"></script> -->
+
+<!--[if IE 8]>
+<script type="text/javascript" src = "../../lib/es5-shim/es5-shim.js"></script>
+<script type="text/javascript" src = "../../lib/es5-shim/es5-sham.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/handlebars/handlebars.min.js"></script>
+<script type="text/javascript" src="../../js/common/common.js"></script>
+<script type="text/javascript" src="../../js/boatFrame/index.js"></script>
+
+
+
+
+</body>
+</html>

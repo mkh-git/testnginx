@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>中国—东盟港口城市合作网络信息平台</title>
+
+        <link href="../../lib/polyfill.object-fit.min.css" rel="stylesheet">
+
+        <!-- <script src="https://cdn.bootcss.com/html5media/1.1.8/html5media.js"></script> -->
+        <script type="text/javascript">
+            var __env = "dev";
+        </script>
+        <link rel="stylesheet" type="text/css" href="../../css/plenary/index.css">
+    </head>
+    <!-- <body onload="init()" onunload="ButtonLogout_onclick()"> -->
+    <body>
+        <div class="m-container">
+            <div class="main-title">
+                <span>中国—东盟港口城市合作网络信息平台--caihcloud</span>
+                <i></i>
+            </div>
+            <div class="globe-shadow" id="J_globe_mask"></div>
+            <div class="globe" id="globe"></div>
+            <div class="globe-pic"></div>
+            <div class="globe-map" id="J_globe_map"></div>
+            <div class="roll-msg t-hide" id="J_news_con">
+                <div class="roll-box">
+                    <div class="roll-tip">
+                        <span>合作网络成员：</span>
+                    </div>
+                    <div class="roll-con">
+                        <!-- <div id="J_hold_news_boxOut" class="hold-news-boxOut">
+                            <div id="J_hold_news_boxInner" class="hold-news-boxInner">
+                                <div id="J_hold_news_con" class="hold-news-con">
+                                    <span>新加坡国际港务集团有限公司（PSA）、</span>
+                                    <span>泰国港口管理局、</span>
+                                    <span>新加坡太平船务有限公司（PIL）、</span>
+                                    <span>马来西亚巴生港、</span>
+                                    <span>柬埔寨西哈努克港、</span>
+                                    <span>马来西亚马六甲皇京港、</span>
+                                    <span>马来西亚彭亨州关丹港、</span>
+                                    <span>缅甸亚洲世界有限公司、</span>
+                                    <span>新加坡国际电子贸易私人有限公司、</span>
+                                    <span>唐山市、</span>
+                                    <span>国家交通运输物流公共信息平台、</span>
+                                    <span>浙江省海洋港口发展委员会、</span>
+                                    <span>浙江省海港投资运营集团有限公司、</span>
+                                    <span>宁波市港口管理局、</span>
+                                    <span>青岛市交通运输委员会港航管理局、</span>
+                                    <span>青岛国际航运服务中心、</span>
+                                    <span>日照港集团有限公司、</span>
+                                    <span>厦门港口管理局、</span>
+                                    <span>福州市港口管理局、</span>
+                                    <span>厦门港务控股集团有限公司、</span>
+                                    <span>连云港市港口管理局、</span>
+                                    <span>湛江港（集团）股份有限公司、</span>
+                                    <span>海南港航控股有限公司、</span>
+                                    <span>万海航运有限公司（台湾）、</span>
+                                    <span>广西北部湾港口管理局、</span>
+                                    <span>广西北部湾国际港务集团、</span>
+                                    <span>上海海事大学、</span>
+                                    <span>中新南向通道（重庆）物流发展有限公司、</span>
+                                    <span>大连市港口与口岸局、</span>
+                                    <span>深圳市盐田港集团有限公司、</span>
+                                </div>
+                                <div id="J_hold_news_copy" class="hold-news-con"></div>
+                            </div>
+                        </div> -->
+                        <div class="rollUpBox">
+                            <ul>
+                                <li>新加坡国际港务集团有限公司（PSA）、泰国港口管理局</li>
+                                <li>新加坡太平船务有限公司（PIL）、马来西亚巴生港</li>
+                                <li>柬埔寨西哈努克港、马来西亚马六甲皇京港、唐山市</li>
+                                <li>马来西亚彭亨州关丹港、缅甸亚洲世界有限公司</li>
+                                <li>新加坡国际电子贸易私人有限公司、万海航运有限公司（台湾）</li>
+                                <li>国家交通运输物流公共信息平台、浙江省海洋港口发展委员会</li>
+                                <li>浙江省海港投资运营集团有限公司、宁波市港口管理局</li>
+                                <li>青岛市交通运输委员会港航管理局、上海海事大学</li>
+                                <li>青岛国际航运服务中心、日照港集团有限公司</li>
+                                <li>厦门港口管理局、福州市港口管理局、广西北部湾港口管理局</li>
+                                <li>厦门港务控股集团有限公司、连云港市港口管理局</li>
+                                <li>湛江港（集团）股份有限公司、海南港航控股有限公司</li>
+                                <li>广西北部湾国际港务集团、中新南向通道（重庆）物流发展有限公司</li>
+                                <li>大连市港口与口岸局、深圳市盐田港集团有限公司</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="qz-video-online-mask" id="J_mask_video_online"></div>
+            <div class="qz-video-online" id="J_videoBox">
+
+                <div class="box-video">
+                    <div class="item-box">
+                        <div class="sub-sub-title">
+                            <span></span>
+                            <i>主卡口视频监控●车辆轨迹</i>
+                        </div>
+                        <div class="car-main-con">
+                            <div class="scroll-item scroll-l J_scroll_l"></div>
+                            <div class="scroll-item scroll-r J_scroll_r"></div>
+                            <div class="video-menu-box">
+                                <ul class="J_video_select" videoType="car" scrollTag=0>
+                                    <li tagInd=1 szCameraId="1000054$1$0$5" class="cur">主入6</li>
+                                    <li tagInd=0 szCameraId="1000054$1$0$6">主入5</li>
+                                    <li tagInd=3 szCameraId="1000054$1$0$24">主出6</li>
+                                    <li tagInd=2 szCameraId="1000054$1$0$23">主出5</li>
+                                    <li tagInd=4 szCameraId="1000054$1$0$3">主入1</li>
+                                    <li tagInd=5 szCameraId="1000054$1$0$9">主入2</li>
+                                    <li tagInd=6 szCameraId="1000054$1$0$7">主入3</li>
+                                    <li tagInd=7 szCameraId="1000054$1$0$8">主入7</li>
+                                    <li tagInd=8 szCameraId="1000054$1$0$19">主出1</li>
+                                    <li tagInd=9 szCameraId="1000054$1$0$20">主出2</li>
+                                    <li tagInd=10 szCameraId="1000054$1$0$21">主出3</li>
+                                    <li tagInd=11 szCameraId="1000054$1$0$25">主出7</li>
+                                </ul>
+                            </div>
+                            <div class="door-video-box J_video_door">
+                                <!-- <video id="J_video" src="http://121.31.41.93:18080/staticVideo/car0.mp4" width="250" height="130" autoplay="autoplay" loop="loop" style="width:100%; height:100%; object-fit: fill">
+                                    您的浏览器不支持 video 标签。
+                                </video> -->
+                                <video id="J_video" src="http://121.31.41.93:18080/staticVideo/car0.mp4" type="video/mp4" width="250" height="130" autoplay="autoplay" loop="loop" style="width:100%; height:100%; object-fit: cover">
+                                    <p style="padding: 50px;color:#fff;text-align: center">您的浏览器不支持 HTML5 video 标签。</p>
+                                </video>
+                                <!-- <div id="obj">
+                                    <object id="DPSDK_OCX" classid="CLSID:D3E383B6-765D-448D-9476-DFD8B499926D" codebase="DpsdkOcx.cab#version=1.0.0.0"></object>
+                                </div>
+                                <div class="ctrlBox">
+                                    登录登出
+                                    <span><input type="button" id="buttonLogin" value="登录" class="button" onclick="return ButtonLogin_onclick()" /></span>
+                                    <span><input type="button" id="buttonLogout" value="登出" class="button" onclick="return ButtonLogout_onclick()" /></span>
+                                    按窗口号
+                                    <input type="button" id="buttonStartRealplayByWndNo" value="播放视频" onclick="return ButtonStartRealplayByWndNo_onclick()" />
+                                    <input type="button" id="buttonStopRealplayByWndNo" value="关闭视频" onclick="return ButtonStopRealplayByWndNo_onclick()" />
+                                    信息：
+                                    <span id="RetInfo"></span>
+                                </div> -->
+                            </div>
+                            <div class="car-line" id="J_carLine">
+                                <!-- <img src="../../theme/default/images/plenary/carLine1.png"> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-box t-hide">
+                        <div class="sub-sub-title">
+                            <span></span>
+                            <i>车辆轨迹</i>
+                        </div>
+                        <div class="car-line" id="J_carLine">
+                            
+                        </div>
+                    </div>
+                    <div class="item-box" style="margin-left: 16px;">
+                        <div class="sub-sub-title">
+                            <span></span>
+                            <i>车辆实时信息</i>
+                        </div>
+                        <div class="car-door-video">
+                            <dl id="J_car_temp">
+
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ship-video">
+                    <iframe frameborder=0 width=530 height=300 marginheight=0 marginwidth=0 src="../boatFrame/index.html"></iframe>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        
+
+        <!-- <script src="../../lib/echarts3/echarts-3.8.min.js"></script> -->
+        <script src="../../lib/echarts4/echarts.min.js"></script>
+        <script src="../../lib/china.js"></script>
+        <script src="../../lib/polyfill.object-fit.min.js"></script>
+        
+        <script src="../../lib/echarts4/echarts-gl.min.js"></script>
+        <script src="http://api.map.baidu.com/api?v=2.0&ak=FZUv2dxnrsRM1p0p0G8wdVqyeSYfO2e9"></script>
+        <script src="../../lib/echarts3/bmap.min.js"></script>
+        <!-- <script src="../../lib/ocxfun-double.js"></script> -->
+
+        <script>
+          // Call polyfill to fit in video
+          document.addEventListener('DOMContentLoaded', function () {
+           objectFit.polyfill({
+            selector: 'video',
+            fittype: 'cover'
+           });
+          });
+
+          
+
+
+         </script>
+
+        
+        <!--[if IE 8]>
+        <script type="text/javascript" src = "../../lib/es5-shim/es5-shim.js"></script>
+        <script type="text/javascript" src = "../../lib/es5-shim/es5-sham.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="../../lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="../../lib/handlebars/handlebars.min.js"></script>
+        <script type="text/javascript" src="../../js/common/common.js"></script>
+        <script type="text/javascript" src="../../js/plenary/index.js"></script>
+    </body>
+</html>
+
